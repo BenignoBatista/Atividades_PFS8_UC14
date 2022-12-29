@@ -48,5 +48,6 @@ namespace Chapter.Contexts
         /// Nesse sistema, a classe livro faz referência a tabela Livros do banco de dados
         /// </summary>
         public DbSet<Livro> Livros { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

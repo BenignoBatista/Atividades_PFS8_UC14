@@ -13,7 +13,7 @@ namespace Chapter.Controllers
     {
         private readonly ILivroRepository _iLivroRepository;//variável privada criada para armazenar os dados do repositório
 
-        public LivroController(LivroRepository iLivroRepository)//injeção de dependência: o controller depende do repository
+        public LivroController(ILivroRepository iLivroRepository)//injeção de dependência: o controller depende do repository
         {
             _iLivroRepository = iLivroRepository;//armazenamento das informações do repositório dentro da variável privada
         }
