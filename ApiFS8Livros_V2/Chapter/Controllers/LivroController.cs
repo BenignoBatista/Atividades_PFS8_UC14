@@ -1,6 +1,7 @@
 ﻿using Chapter.Interfaces;
 using Chapter.Models;
 using Chapter.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -70,6 +71,7 @@ namespace Chapter.Controllers
         /// <returns>status code Ok</returns>
         /// <exception cref="Exception">mensagem de erro</exception>
         [HttpPost]
+        [Authorize(Roles = "7")]
         public IActionResult Cadastrar(Livro livro)
         {
             try

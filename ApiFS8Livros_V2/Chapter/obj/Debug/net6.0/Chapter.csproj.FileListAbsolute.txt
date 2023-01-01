@@ -318,3 +318,4 @@ C:\Users\benigno\OneDrive (2).old\Educ\Programador Full Stack Senai\UC_14 - API\
 C:\Users\benigno\OneDrive (2).old\Educ\Programador Full Stack Senai\UC_14 - API\APIs\ApiFS8Livros_V2\Chapter\obj\Debug\net6.0\Chapter.pdb
 C:\Users\benigno\OneDrive (2).old\Educ\Programador Full Stack Senai\UC_14 - API\APIs\ApiFS8Livros_V2\Chapter\obj\Debug\net6.0\Chapter.genruntimeconfig.cache
 C:\Users\benigno\OneDrive (2).old\Educ\Programador Full Stack Senai\UC_14 - API\APIs\ApiFS8Livros_V2\Chapter\obj\Debug\net6.0\ref\Chapter.dll
+C:\Users\benigno\OneDrive (2).old\Educ\Programador Full Stack Senai\UC_14 - API\APIs\ApiFS8Livros_V2\Chapter\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
