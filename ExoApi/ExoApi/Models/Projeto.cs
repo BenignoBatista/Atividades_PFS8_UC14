@@ -8,6 +8,7 @@
         public string Tecnologias { get; set; }
         public string Requisitos { get; set; }
         public string Area { get; set; }
+        public string DataInicio { get; set; }
 
     }
 }

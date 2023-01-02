@@ -6,11 +6,15 @@ namespace ExoApi.Contexts
     public class SqlContext : DbContext
     {
 
-        public SqlContext() { }
-        public SqlContext(DbContextOptions<SqlContext> options) : base(options) { }
+        public SqlContext()
+        {
+        }
+        public SqlContext(DbContextOptions<SqlContext> options) : base(options)
+        {
+        }
+
         // vamos utilizar esse método para configurar o banco de dados
-        protected override void
-        OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
