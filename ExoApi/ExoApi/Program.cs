@@ -1,4 +1,5 @@
 using ExoApi.Contexts;
+using ExoApi.Interfaces;
 using ExoApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,8 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<SqlContext, SqlContext>();
-builder.Services.AddTransient<ProjetoRepository>();
+builder.Services.AddTransient<IProjetoRepository, ProjetoRepository>();
+builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

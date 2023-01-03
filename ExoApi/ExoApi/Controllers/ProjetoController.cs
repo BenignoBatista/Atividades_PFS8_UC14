@@ -1,4 +1,5 @@
-﻿using ExoApi.Models;
+﻿using ExoApi.Interfaces;
+using ExoApi.Models;
 using ExoApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,10 @@ namespace ExoApi.Controllers
     [ApiController]
     public class ProjetoController : ControllerBase
     {
-        private readonly ProjetoRepository _projetoRepository; //Professor nomeou a variável como repository
-        public ProjetoController(ProjetoRepository projetoRepository)
+        private readonly IProjetoRepository _iprojetoRepository; //Professor nomeou a variável como repository
+        public ProjetoController(IProjetoRepository iprojetoRepository)
         {
-            _projetoRepository = projetoRepository;
+            _iprojetoRepository = iprojetoRepository;
         }
 
         [HttpGet]
@@ -21,7 +22,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                return Ok(_projetoRepository.Ler());
+                return Ok(_iprojetoRepository.Ler());
             }
             catch (Exception e)
             {
@@ -35,7 +36,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                _projetoRepository.Cadastrar(projeto);
+                _iprojetoRepository.Cadastrar(projeto);
                 return Ok(projeto);
             }
             catch (Exception e)
@@ -50,7 +51,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                _projetoRepository.Atualizar(id, projeto);
+                _iprojetoRepository.Atualizar(id, projeto);
                 return StatusCode(204);
             }
             catch (Exception e)
@@ -65,7 +66,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                _projetoRepository.Deletar(id);
+                _iprojetoRepository.Deletar(id);
                 return StatusCode(204);
             }
             catch (Exception e)
@@ -80,7 +81,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                Projeto projeto = _projetoRepository.BuscarPorId(id);
+                Projeto projeto = _iprojetoRepository.BuscarPorId(id);
 
                 if (projeto == null)
                 {
@@ -100,7 +101,7 @@ namespace ExoApi.Controllers
         {
             try
             {
-                Projeto projeto = _projetoRepository.BuscarPorTitulo(titulo);
+                Projeto projeto = _iprojetoRepository.BuscarPorTitulo(titulo);
                 if (projeto == null)
                 {
                     return NotFound();
