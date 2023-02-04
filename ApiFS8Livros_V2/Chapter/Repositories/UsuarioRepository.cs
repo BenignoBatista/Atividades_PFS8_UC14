@@ -56,7 +56,7 @@ namespace Chapter.Repositories
 
         public Usuario Login(string email, string senha)
         {
-            throw new NotImplementedException();
+            return _chapterContext.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }
